@@ -1,54 +1,14 @@
-# 03-vue-router-spa
+# 03-Vue Router SPA
 
-This template should help get you started developing with Vue 3 in Vite.
+Esto es un proyecto de un curso de Vue de fernando herrera con algunas modificaciones y mejoras aplicadas
 
-## Recommended IDE Setup
+## Mejoras aplicadas
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Se ha agregado dockerización al proyecto, para hacer que no sean necesarias instalaciones en local
+- Se ha agregado un .npmrc para incrementar la seguridad del repositorio  
+- Se ha instalado pnpm en el contenedor para incrementar la seguridad del repositorio
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-pnpm test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+|Entorno|Comando|url|
+|-|-|-|
+|dev|docker compose --profile dev up|<http://localhost:8191/>|
+|prod|docker compose --profile prod up|<http://localhost:8091/>|
