@@ -1,0 +1,30 @@
+import HomePage from '@/modules/landing/pages/HomePage.vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
+
+const router = createRouter({
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomePage,
+    },
+    {
+      path: '/features',
+      name: 'features',
+      component: () => import('@landingPages/FeaturesPage.vue'),
+    },
+        {
+      path: '/pricing',
+      name: 'pricing',
+      component: () => import('@landingPages/PricingPage.vue'),
+    },
+        {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('@landingPages/ContactPage.vue'),
+    },
+  ],
+});
+
+export default router;
