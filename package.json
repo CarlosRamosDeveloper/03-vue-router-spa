@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.33.0",
-  "scripts": {    
+  "scripts": {
     "dev": "vite --host",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
@@ -19,8 +19,7 @@
   "dependencies": {
     "@tailwindcss/vite": "4.2.2",
     "tailwindcss": "4.2.2",
-    "vue": "3.5.31",
-    "vue-router": "4.6.4"
+    "vue": "3.5.31"
   },
   "devDependencies": {
     "@tsconfig/node24": "24.0.4",
@@ -44,6 +43,7 @@
     "vite": "8.0.3",
     "vite-plugin-vue-devtools": "8.1.1",
     "vitest": "4.1.2",
+    "vue-router": "4.6.4",
     "vue-tsc": "3.2.6"
   },
   "engines": {
