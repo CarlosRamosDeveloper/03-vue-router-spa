@@ -1,0 +1,23 @@
+services:
+
+  app:
+    profiles: ["prod"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vue_router_spa    
+    ports:
+      - "8091:8080"
+
+  app-dev:
+    profiles: ["dev"]
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: vue_router_spa_dev
+    command: pnpm dev
+    ports:
+      - "8191:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
