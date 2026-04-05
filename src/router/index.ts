@@ -1,28 +1,43 @@
+import LandingLayout from '@/modules/landing/layouts/LandingLayout.vue';
 import HomePage from '@/modules/landing/pages/HomePage.vue';
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // Landing
     {
       path: '/',
-      name: 'home',
-      component: HomePage,
+      name: 'landing',
+      component: LandingLayout,
+      children: [
+        {
+          path: '/',
+          name: 'home',
+          component: HomePage,
+        },
+        {
+          path: '/features',
+          name: 'features',
+          component: () => import('@landingPages/FeaturesPage.vue'),
+        },
+        {
+          path: '/pricing',
+          name: 'pricing',
+          component: () => import('@landingPages/PricingPage.vue'),
+        },
+        {
+          path: '/contact',
+          name: 'contact',
+          component: () => import('@landingPages/ContactPage.vue'),
+        },
+      ],
     },
+    // Auth
     {
-      path: '/features',
-      name: 'features',
-      component: () => import('@landingPages/FeaturesPage.vue'),
-    },
-        {
-      path: '/pricing',
-      name: 'pricing',
-      component: () => import('@landingPages/PricingPage.vue'),
-    },
-        {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('@landingPages/ContactPage.vue'),
+      path: '/auth',
+      name: 'auth',
+      component: () => import('@authPages/LoginPage.vue'),
     },
   ],
 });
