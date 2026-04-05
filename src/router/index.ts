@@ -33,13 +33,23 @@ const router = createRouter({
           name: 'contact',
           component: () => import('@landingPages/ContactPage.vue'),
         },
+        {
+          path: '/pokemon/:id',
+          name: 'pokemon',
+          props: (route) => {
+            const id = Number(route.params.id)
+
+            return { pokemonId: isNaN(id) ? 1 : id}
+          },
+          component: () => import('../modules/pokemon/pages/PokemonPage.vue'),
+        },
       ],
     },
     // Auth
     {
       path: '/auth',
       name: 'auth',
-      redirect: { name: "login" },
+      redirect: { name: 'login' },
       component: AuthLayout,
       children: [
         {
@@ -56,10 +66,10 @@ const router = createRouter({
     },
     // NotFound
     {
-      path: "/:pathMatch(.*)*",
+      path: '/:pathMatch(.*)*',
       //redirect: "/"
-      component: NotFound404
-    }
+      component: NotFound404,
+    },
   ],
 });
 
