@@ -20,7 +20,7 @@
             <span class="text-3xl font-semibold">10</span>
             <span class="text-gray-400 font-medium">/ user</span>
           </p>
-          <hr class="mt-4 border-1" />
+          <hr class="mt-4 border" />
           <div class="pt-8">
             <p class="font-semibold text-gray-400 text-left">
               <span class="material-icons align-middle"> done </span>
@@ -53,7 +53,7 @@
             <span class="text-3xl font-semibold">24</span>
             <span class="text-gray-400 font-medium">/ user</span>
           </p>
-          <hr class="mt-4 border-1 border-gray-600" />
+          <hr class="mt-4 border border-gray-600" />
           <div class="pt-8">
             <p class="font-semibold text-gray-400 text-left">
               <span class="material-icons align-middle"> done </span>
@@ -89,7 +89,7 @@
             <span class="text-3xl font-semibold">35</span>
             <span class="text-gray-400 font-medium">/ user</span>
           </p>
-          <hr class="mt-4 border-1" />
+          <hr class="mt-4 border" />
           <div class="pt-8">
             <p class="font-semibold text-gray-400 text-left">
               <span class="material-icons align-middle"> done </span>
