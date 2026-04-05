@@ -1,4 +1,5 @@
 import AuthLayout from '@/modules/auth/layouts/AuthLayout.vue';
+import NotFound404 from '@/modules/common/pages/NotFound404.vue';
 import LandingLayout from '@/modules/landing/layouts/LandingLayout.vue';
 import HomePage from '@/modules/landing/pages/HomePage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -53,6 +54,12 @@ const router = createRouter({
         },
       ],
     },
+    // NotFound
+    {
+      path: "/:pathMatch(.*)*",
+      //redirect: "/"
+      component: NotFound404
+    }
   ],
 });
 
