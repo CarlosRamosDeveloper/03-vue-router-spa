@@ -38,6 +38,7 @@ const router = createRouter({
     {
       path: '/auth',
       name: 'auth',
+      redirect: { name: "login" },
       component: AuthLayout,
       children: [
         {
