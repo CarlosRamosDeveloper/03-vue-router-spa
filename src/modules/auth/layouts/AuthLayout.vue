@@ -7,7 +7,7 @@
         alt="Placeholder Image"
         class="object-cover w-full h-full"
       />
-    </div>        
+    </div>
     <RouterView />
   </div>
 </template>
